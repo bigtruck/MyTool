@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
@@ -35,12 +36,14 @@ namespace MyToolBox
 
         private void ButtonClick_OpenData(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void ButtonClick_Make(object sender, RoutedEventArgs e)
         {
-
+            //DependencyProperty dp = DependencyProperty.from;
+            //Progressbar.SetCurrentValue(0,100);
+            
         }
     }
 }

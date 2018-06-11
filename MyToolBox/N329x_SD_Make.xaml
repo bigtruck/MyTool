@@ -1,30 +1,30 @@
-﻿<Window x:Class="MyToolBox.N329x_SD_Make"
+﻿<Window x:Name="window" x:Class="MyToolBox.N329x_SD_Make"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyToolBox"
         mc:Ignorable="d"
-        Title="N329x_SD_Make" Height="218" Width="880" ResizeMode="NoResize">
+        Title="N329x_SD_Make" Height="211" Width="880">
     <Window.Resources>
         <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>
     </Window.Resources>
-    <Grid Margin="0,0,-0.333,17.667">
-        <GroupBox x:Name="GROUPBOX_FILE_SEL" Width="660" Height="138" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+    <Grid x:Name="grid" Margin="0,0,0,0" Width="{Binding Width, ElementName=window}">
+        <GroupBox x:Name="Groupbox_FileSel" Width="660" Height="138" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
             <GroupBox.Header>
                 <TextBlock>文件选择</TextBlock>
             </GroupBox.Header>
             <StackPanel>
-                <TextBox x:Name="TEXTBOX_OPEN_BOOT" Text="TextBox" HorizontalAlignment="Left" Height="30" Margin="5,2,0,5" TextWrapping="Wrap" VerticalAlignment="Center" Width="500" FontSize="20"/>
-                <TextBox x:Name="TEXTBOX_OPEN_APP" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TEXTBOX_OPEN_BOOT}" Height="{Binding Height, ElementName=TEXTBOX_OPEN_BOOT}" Margin="{Binding Margin, ElementName=TEXTBOX_OPEN_BOOT}" TextWrapping="{Binding TextWrapping, ElementName=TEXTBOX_OPEN_BOOT}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TEXTBOX_OPEN_BOOT}" Width="{Binding Width, ElementName=TEXTBOX_OPEN_BOOT}" FontSize="{Binding FontSize, ElementName=TEXTBOX_OPEN_BOOT}" FontFamily="{Binding FontFamily, ElementName=TEXTBOX_OPEN_BOOT}"/>
-                <TextBox x:Name="TEXTBOX_OPEN_DATA" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TEXTBOX_OPEN_BOOT}" Height="{Binding Height, ElementName=TEXTBOX_OPEN_BOOT}" Margin="{Binding Margin, ElementName=TEXTBOX_OPEN_BOOT}" TextWrapping="{Binding TextWrapping, ElementName=TEXTBOX_OPEN_BOOT}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TEXTBOX_OPEN_BOOT}" Width="{Binding Width, ElementName=TEXTBOX_OPEN_BOOT}" FontSize="{Binding FontSize, ElementName=TEXTBOX_OPEN_BOOT}" FontFamily="{Binding FontFamily, ElementName=TEXTBOX_OPEN_BOOT}"/>
-                <Button x:Name="BUTTON_OPEN_BOOT" Content="打开引导程序" HorizontalAlignment="Left" Margin="510,-110,0,118" VerticalAlignment="Top" Width="134" Height="{Binding Height, ElementName=TEXTBOX_OPEN_BOOT}" FontSize="18" FontWeight="Bold" Click="ButtonClick_OpenBoot"/>
-                <Button x:Name="BUTTON_OPEN_APP" Content="打开应用程序" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=BUTTON_OPEN_BOOT}" Margin="{Binding Margin,ElementName=BUTTON_OPEN_BOOT}" VerticalAlignment="{Binding VerticalAlignment,ElementName=BUTTON_OPEN_BOOT}" Width="{Binding Width, ElementName=BUTTON_OPEN_BOOT}" Height="{Binding Height, ElementName=BUTTON_OPEN_BOOT}" FontSize="{Binding FontSize,ElementName=BUTTON_OPEN_BOOT}" FontWeight="{Binding FontWeight,ElementName=BUTTON_OPEN_BOOT}" Click="ButtonClick_OpenApp"/>
-                <Button x:Name="BUTTON_OPEN_DATA" Content="打开数据文件" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=BUTTON_OPEN_BOOT}" Margin="{Binding Margin,ElementName=BUTTON_OPEN_BOOT}" VerticalAlignment="{Binding VerticalAlignment,ElementName=BUTTON_OPEN_BOOT}" Width="{Binding Width, ElementName=BUTTON_OPEN_BOOT}" Height="{Binding Height, ElementName=BUTTON_OPEN_BOOT}" FontSize="{Binding FontSize,ElementName=BUTTON_OPEN_BOOT}" FontWeight="{Binding FontWeight,ElementName=BUTTON_OPEN_BOOT}" Click="ButtonClick_OpenData"/>
+                <TextBox x:Name="TextBox_OpenBoot" Text="TextBox" HorizontalAlignment="Left" Height="30" Margin="5,2,0,5" TextWrapping="Wrap" VerticalAlignment="Center" Width="500" FontSize="20"/>
+                <TextBox x:Name="TextBox_OpenApp" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TextBox_OpenBoot}" Height="{Binding Height, ElementName=TextBox_OpenBoot}" Margin="{Binding Margin, ElementName=TextBox_OpenBoot}" TextWrapping="{Binding TextWrapping, ElementName=TextBox_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBox_OpenBoot}" Width="{Binding Width, ElementName=TextBox_OpenBoot}" FontSize="{Binding FontSize, ElementName=TextBox_OpenBoot}" FontFamily="{Binding FontFamily, ElementName=TextBox_OpenBoot}"/>
+                <TextBox x:Name="TextBox_OpenData" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TextBox_OpenBoot}" Height="{Binding Height, ElementName=TextBox_OpenBoot}" Margin="{Binding Margin, ElementName=TextBox_OpenBoot}" TextWrapping="{Binding TextWrapping, ElementName=TextBox_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBox_OpenBoot}" Width="{Binding Width, ElementName=TextBox_OpenBoot}" FontSize="{Binding FontSize, ElementName=TextBox_OpenBoot}" FontFamily="{Binding FontFamily, ElementName=TextBox_OpenBoot}"/>
+                <Button x:Name="Button_OpenBoot" Content="打开引导程序" HorizontalAlignment="Left" Margin="510,-110,0,118" VerticalAlignment="Top" Width="134" Height="{Binding Height, ElementName=TextBox_OpenBoot}" FontSize="18" FontWeight="Bold" Click="ButtonClick_OpenBoot"/>
+                <Button x:Name="Button_OpenApp" Content="打开应用程序" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=Button_OpenBoot}" Margin="{Binding Margin,ElementName=Button_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment,ElementName=Button_OpenBoot}" Width="{Binding Width, ElementName=Button_OpenBoot}" Height="{Binding Height, ElementName=Button_OpenBoot}" FontSize="{Binding FontSize,ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight,ElementName=Button_OpenBoot}" Click="ButtonClick_OpenApp"/>
+                <Button x:Name="Button_OpenData" Content="打开数据文件" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=Button_OpenBoot}" Margin="{Binding Margin,ElementName=Button_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment,ElementName=Button_OpenBoot}" Width="{Binding Width, ElementName=Button_OpenBoot}" Height="{Binding Height, ElementName=Button_OpenBoot}" FontSize="{Binding FontSize,ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight,ElementName=Button_OpenBoot}" Click="ButtonClick_OpenData"/>
             </StackPanel>
         </GroupBox>
 
-        <GroupBox x:Name="GROUPBOX_DISK_SEL" Width="200" Height="60" Margin="673,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+        <GroupBox x:Name="Groupbox_DiskSel" Width="200" Height="60" Margin="673,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
             <GroupBox.Header>
                 <TextBlock>磁盘选择</TextBlock>
             </GroupBox.Header>
@@ -38,8 +38,10 @@
                 </ComboBox>
             </StackPanel>
         </GroupBox>
-        <Button x:Name="BUTTON_MAKE" Content="烧写" HorizontalAlignment="Left" Margin="673,70,0,0" VerticalAlignment="Top" Width="197" Height="73" FontSize="{Binding FontSize, ElementName=BUTTON_OPEN_BOOT}" FontFamily="{Binding FontFamily, ElementName=BUTTON_OPEN_BOOT}" FontWeight="{Binding FontWeight, ElementName=BUTTON_OPEN_BOOT}" Click="ButtonClick_Make"/>
-        <ProgressBar x:Name="PROGRESSBAR" HorizontalAlignment="Left" Height="10" Margin="5,161,0,0" VerticalAlignment="Top" Width="865" SmallChange="1"/>
+        <Button x:Name="Button_Make" Content="烧写" HorizontalAlignment="Left" Margin="673,70,0,0" VerticalAlignment="Top" Width="197" Height="73" FontSize="{Binding FontSize, ElementName=Button_OpenBoot}" FontFamily="{Binding FontFamily, ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight, ElementName=Button_OpenBoot}" Click="ButtonClick_Make"/>
+        <ProgressBar x:Name="Progressbar" HorizontalAlignment="Left" Height="30" Margin="0,150,0,0" VerticalAlignment="Top" Width="{Binding Width, ElementName=grid}" SmallChange="1" IsManipulationEnabled="True">
+            
+        </ProgressBar>
     </Grid>
 
 

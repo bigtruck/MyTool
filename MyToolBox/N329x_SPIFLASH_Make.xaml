@@ -1,0 +1,29 @@
+﻿<Window x:Name="window" x:Class="MyToolBox.N329x_SPIFLASH_Make"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyToolBox"
+        mc:Ignorable="d"
+        Title="N329x_SPIFLASH_Make" Height="189.082" Width="800" ResizeMode="NoResize">
+    <Grid x:Name="GRID" Width="{Binding Width, ElementName=window}">
+        <GroupBox x:Name="Groupbox_FileSel" Width="660" Height="138" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">
+            <GroupBox.Header>
+                <TextBlock>文件选择</TextBlock>
+            </GroupBox.Header>
+            <StackPanel>
+                <TextBox x:Name="TextBox_OpenBoot" Text="TextBox" HorizontalAlignment="Left" Height="30" Margin="5,2,0,5" VerticalAlignment="Center" Width="500" FontSize="16"/>
+                <TextBox x:Name="TextBox_OpenApp" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TextBox_OpenBoot}" Height="{Binding Height, ElementName=TextBox_OpenBoot}" Margin="{Binding Margin, ElementName=TextBox_OpenBoot}" TextWrapping="{Binding TextWrapping, ElementName=TextBox_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBox_OpenBoot}" Width="{Binding Width, ElementName=TextBox_OpenBoot}" FontSize="{Binding FontSize, ElementName=TextBox_OpenBoot}" FontFamily="{Binding FontFamily, ElementName=TextBox_OpenBoot}"/>
+                <TextBox x:Name="TextBox_OpenData" Text="TextBox" HorizontalAlignment="{Binding HorizontalAlignment, ElementName=TextBox_OpenBoot}" Height="{Binding Height, ElementName=TextBox_OpenBoot}" Margin="{Binding Margin, ElementName=TextBox_OpenBoot}" TextWrapping="{Binding TextWrapping, ElementName=TextBox_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment, ElementName=TextBox_OpenBoot}" Width="{Binding Width, ElementName=TextBox_OpenBoot}" FontSize="{Binding FontSize, ElementName=TextBox_OpenBoot}" FontFamily="{Binding FontFamily, ElementName=TextBox_OpenBoot}" IsEnabled="False"/>
+                <Button x:Name="Button_OpenBoot" Content="打开引导程序" HorizontalAlignment="Left" Margin="510,-110,0,118" VerticalAlignment="Top" Width="134" Height="{Binding Height, ElementName=TextBox_OpenBoot}" FontSize="18" FontWeight="Bold" Click="ButtonClick_OpenBoot"/>
+                <Button x:Name="Button_OpenApp" Content="打开应用程序" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=Button_OpenBoot}" Margin="{Binding Margin,ElementName=Button_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment,ElementName=Button_OpenBoot}" Width="{Binding Width, ElementName=Button_OpenBoot}" Height="{Binding Height, ElementName=Button_OpenBoot}" FontSize="{Binding FontSize,ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight,ElementName=Button_OpenBoot}" Click="ButtonClick_OpenApp"/>
+                <Button x:Name="Button_OpenData" Content="打开数据文件" HorizontalAlignment="{Binding HorizontalAlignment,ElementName=Button_OpenBoot}" Margin="{Binding Margin,ElementName=Button_OpenBoot}" VerticalAlignment="{Binding VerticalAlignment,ElementName=Button_OpenBoot}" Width="{Binding Width, ElementName=Button_OpenBoot}" Height="{Binding Height, ElementName=Button_OpenBoot}" FontSize="{Binding FontSize,ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight,ElementName=Button_OpenBoot}" Click="ButtonClick_OpenData" IsEnabled="False"/>
+            </StackPanel>
+        </GroupBox>
+        <ProgressBar x:Name="Progressbar" HorizontalAlignment="Left" Height="10" Margin="0,150,0,0" VerticalAlignment="Top" Width="{Binding Width, ElementName=GRID}" SmallChange="1" IsManipulationEnabled="True">
+
+        </ProgressBar>
+        <Button x:Name="Button_Make" Content="生成" HorizontalAlignment="Left" Margin="670,10,0,0" VerticalAlignment="Top" Width="120" Height="133" FontFamily="{Binding FontFamily, ElementName=Button_OpenBoot}" FontSize="{Binding FontSize, ElementName=Button_OpenBoot}" FontWeight="{Binding FontWeight, ElementName=Button_OpenBoot}" Click="ButoonClick_Make"/>
+
+    </Grid>
+</Window>
