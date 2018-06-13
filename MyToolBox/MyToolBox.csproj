@@ -74,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Bin2Dat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -82,25 +86,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Bin2Dat.xaml.cs">
+      <DependentUpon>Bin2Dat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="N329x_SD_Make.xaml">
+    <Page Include="N3290x_SD_Burn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="N329x_SPIFLASH_Make.xaml">
+    <Page Include="N3290x_SPIFLASH_Make.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="N329x_SD_Make.xaml.cs">
-      <DependentUpon>N329x_SD_Make.xaml</DependentUpon>
+    <Compile Include="N3290x_SD_Burn.xaml.cs">
+      <DependentUpon>N3290x_SD_Burn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="N329x_SPIFLASH_Make.xaml.cs">
-      <DependentUpon>N329x_SPIFLASH_Make.xaml</DependentUpon>
+    <Compile Include="N3290x_SPIFLASH_Make.xaml.cs">
+      <DependentUpon>N3290x_SPIFLASH_Make.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -15,11 +16,11 @@ using System.Windows.Shapes;
 namespace MyToolBox
 {
     /// <summary>
-    /// N329x_SD_Make.xaml 的交互逻辑
+    /// N3290x_SD_Burn.xaml 的交互逻辑
     /// </summary>
-    public partial class N329x_SD_Make : Window
+    public partial class N3290x_SD_Burn : Window
     {
-        public N329x_SD_Make()
+        public N3290x_SD_Burn()
         {
             InitializeComponent();
         }
@@ -45,5 +46,12 @@ namespace MyToolBox
             //Progressbar.SetCurrentValue(0,100);
             
         }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.Hide();
+            e.Cancel = true;
+        }
+
     }
 }

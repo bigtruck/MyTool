@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,9 @@ using System.Windows.Shapes;
 namespace MyToolBox
 {
     /// <summary>
-    /// N329x_SPIFLASH_Make.xaml 的交互逻辑
+    /// N3290x_SPIFLASH_Make.xaml 的交互逻辑
     /// </summary>
-    public partial class N329x_SPIFLASH_Make : Window
+    public partial class N3290x_SPIFLASH_Make : Window
     {
         private const UInt32 BOOTIMAGE_MARK0 = 0x57425AA5;
         private const UInt32 BOOTIMAGE_RUNADDR = 0x00900000;
@@ -50,12 +51,18 @@ namespace MyToolBox
         };
         private UInt32 bootLen;
         private UInt32 appLen;
-        public N329x_SPIFLASH_Make()
+        public N3290x_SPIFLASH_Make()
         {
             InitializeComponent();
             TextBox_OpenBoot.Text = null;
             TextBox_OpenApp.Text = null;
             TextBox_OpenData.Text = null;
+            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+        }
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.Hide();
+            e.Cancel = true;
         }
 
         private void ButtonClick_OpenBoot(object sender, RoutedEventArgs e)
