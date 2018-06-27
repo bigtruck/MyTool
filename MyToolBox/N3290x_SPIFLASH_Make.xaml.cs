@@ -59,11 +59,11 @@ namespace MyToolBox
             TextBox_OpenData.Text = null;
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.Hide();
-            e.Cancel = true;
-        }
+        //protected override void OnClosing(CancelEventArgs e)
+        //{
+        //    this.Hide();
+        //    e.Cancel = true;
+        //}
 
         private void ButtonClick_OpenBoot(object sender, RoutedEventArgs e)
         {

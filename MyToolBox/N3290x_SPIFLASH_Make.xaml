@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyToolBox"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="N3290x_SPIFLASH_Make" Height="189.082" Width="800" ResizeMode="NoResize">
     <Grid x:Name="GRID" Width="{Binding Width, ElementName=window}">
         <GroupBox x:Name="Groupbox_FileSel" Width="660" Height="138" Margin="5,5,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16">

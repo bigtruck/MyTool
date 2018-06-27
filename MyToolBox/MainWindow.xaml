@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyToolBox"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button x:Name="ButtonName_SD_Burn" Content="N3290x SD Burn" Click="ButtonClick_N3290x_SD_Burn" HorizontalAlignment="Left" Margin="40,30,0,0" VerticalAlignment="Top" Width="232" Height="50" FontSize="20" FontWeight="Bold"/>

@@ -23,6 +23,7 @@ namespace MyToolBox
         public N3290x_SD_Burn()
         {
             InitializeComponent();
+            
         }
 
         private void ButtonClick_OpenBoot(object sender, RoutedEventArgs e)
@@ -47,11 +48,11 @@ namespace MyToolBox
             
         }
 
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.Hide();
-            e.Cancel = true;
-        }
+        //protected override void OnClosing(CancelEventArgs e)
+        //{
+        //    this.Hide();
+        //    e.Cancel = true;
+        //}
 
     }
 }

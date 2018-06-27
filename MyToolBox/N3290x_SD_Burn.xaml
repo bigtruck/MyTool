@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyToolBox"
         mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
         Title="N3290x_SD_Burn" Height="211" Width="880">
     <Window.Resources>
         <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>

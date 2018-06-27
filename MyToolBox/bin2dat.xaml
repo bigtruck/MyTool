@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyToolBox"
         mc:Ignorable="d"
-        Title="Bin2Dat" Height="450" Width="800" ResizeMode="NoResize">
-    <Grid>
-        
+        WindowStartupLocation="CenterScreen"
+        AllowDrop="True"
+        Drop="Window_Drop"
+        Title="Bin2Dat" Height="100" Width="264" ResizeMode="NoResize">
+    <Grid x:Name="grid">
+        <TextBlock HorizontalAlignment="Center" Margin="{Binding Margin, ElementName=grid}" TextWrapping="Wrap" Text="拖动文件到这个窗口中" VerticalAlignment="Center" FontSize="18"/>
+        <ProgressBar Name="progBar" HorizontalAlignment="Left" Height="10" Margin="0,61,0,0" VerticalAlignment="Top" Width="258" Maximum="1000"/>
+
     </Grid>
 </Window>
