@@ -100,16 +100,23 @@ namespace MyToolBox
                 BinaryReader fBinReader = new BinaryReader(fBinStream);
                 byte[] binBuff = new byte[fBinStream.Length];
                 fBinReader.Read(binBuff, 0, (int)fBinStream.Length);
+                fBinReader.Close();
+                //byte[] datBuff = new byte[binBuff.Length * 6];
+                //long cnt;
                 string datHex;
                 datHex = null;
+                //cnt = 0;
                 for (int i = 0; i < binBuff.Length; i++)
                 {
                     if ((i % 16) == 0)
                     {
                         datHex += "\r\n";
+                        //datBuff[cnt++] = (byte)'\r';
+                        //datBuff[cnt++] = (byte)'\n';
                     }
-                    //datHex += String.Format("0x{0:X2},", binBuff[i]);
-                    datHex += String.Format("{0:D3},", binBuff[i]);
+
+                    datHex += String.Format("0x{0:X2},", binBuff[i]);//十六进制
+                    //datHex += String.Format("{0:D3},", binBuff[i]);//十进制
                     SetprogressBar((i / (binBuff.Length/1000)));
                 }
                 FileStream fDatStream = new FileStream(saveFileDialog.FileName, FileMode.Create, FileAccess.Write);
@@ -117,6 +124,8 @@ namespace MyToolBox
                 BinaryWriter binaryWriter = new BinaryWriter(fDatStream);
                 byte[] datBuff = System.Text.Encoding.Default.GetBytes(datHex);
                 binaryWriter.Write(datBuff, 0, datBuff.Length);
+                binaryWriter.Flush();
+                binaryWriter.Close();
                 //MessageBox.Show(datFilePath, "完成", MessageBoxButton.OK, MessageBoxImage.Information);
                 MessageBox.Show(saveFileDialog.FileName, "完成", MessageBoxButton.OK, MessageBoxImage.Information);
             }
